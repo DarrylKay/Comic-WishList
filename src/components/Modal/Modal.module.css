@@ -1,0 +1,202 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.93);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  z-index: 200;
+}
+
+.modalContainer {
+  max-width: 750px;
+  background: white;
+  padding: 10px;
+  position: relative;
+}
+
+.closeModal {
+  float: right;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin: 8px;
+  border-radius: 50%;
+  border: 1px solid darkgrey;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.closeModal:hover {
+  background: red;
+  color: white;
+  border: none;
+}
+
+.modalGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.images {
+  width: 100%;
+  height: 500px;
+}
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info {
+  height: 500px;
+  width: 100%;
+  padding: 15px;
+  overflow-y: scroll;
+}
+.h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.infoLine {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.review {
+  font-size: 95%;
+  padding: 10px 0;
+}
+
+.addBook {
+  padding: 10px;
+  background: red;
+  color: white;
+  border-radius: 5px;
+  border: none;
+}
+
+.addBook:hover {
+  background: darkred;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .modalContainer {
+    max-width: 650px;
+  }
+  .modalGrid {
+    grid-gap: 10px;
+  }
+  .images {
+    width: 310px;
+    height: 450px !important;
+  }
+  .info {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .modalContainer {
+    max-width: 380px;
+    padding: 8px;
+  }
+
+  .modalGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+  }
+
+  .images {
+    display: none;
+  }
+
+  .info {
+    height: 450px;
+    width: 100%;
+    padding: 15px;
+    overflow-y: scroll;
+  }
+
+  .h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 0;
+  }
+  
+  .infoLine {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .review {
+    font-size: 85%;
+    padding: 10px 0;
+  }
+}
+
+
+@media only screen and (max-width: 390px) {
+  .modalContainer {
+    max-width: 350px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .modalContainer {
+    max-width: 300px;
+  }
+}
